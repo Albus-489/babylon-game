@@ -21,6 +21,11 @@ export default class BasicScene {
       this.scene
     );
     camera.attachControl(); //connect camera to the peripheral
+
+    const ground: BABYLON.GroundMesh = BABYLON.MeshBuilder.CreateGround(
+      "ground",
+      { width: 10, height: 10, subdivisions: 20 }
+    );
     return scene;
   }
 }
